@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>level 2</title>
+  <link rel="stylesheet" href="css.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  body{
+    font-family:'Poppins',sans-serif;
+    background:#e8edf0;
+    color:#111;
+  }
+
+  /* TOP BAR */
+
+  .top-line{
+    height:2px;
+    background:#6e6e6e;
+    margin-top:30px;
+  }
+
+  header{
+    padding:10px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .left-header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+  }
+
+  .logo{
+    width:55px;
+  }
+
+  .title{
+    font-size:20px;
+    font-weight:700;
+  }
+
+  .center-progress{
+    text-align:center;
+  }
+
+  .level-text{
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+
+  .progress{
+    display:flex;
+    gap:4px;
+  }
+
+  .progress div{
+    width:38px;
+    height:10px;
+    background:#d4d4d4;
+    border-radius:20px;
+  }
+
+  .progress .active{
+    background:#2c2cf5;
+  }
+
+  nav{
+    display:flex;
+    gap:30px;
+  }
+
+  nav a{
+    text-decoration:none;
+    color:#111;
+    font-weight:700;
+  }
+
+  /* CONTENT */
+
+  .container{
+    width:90%;
+    margin:auto;
+  }
+
+  h1{
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:20px;
+  }
+
+  .info-box{
+    max-width:650px;
+    margin:auto;
+    border:1px solid orange;
+    border-radius:10px;
+    padding:15px;
+    font-size:15px;
+  }
+
+  .main-section{
+    margin-top:35px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:45px;
+  }
+
+  .arrow{
+    font-size:50px;
+    color:#333;
+  }
+
+  /* CARD 1 */
+
+  .sketch-card{
+    width:210px;
+    height:300px;
+    background:#f3f3f3;
+    border-radius:10px;
+
+    transform:rotate(-6deg);
+
+    padding:20px;
+  }
+
+  .sketch-box{
+    height:80px;
+    background:white;
+    margin-bottom:35px;
+    border-radius:4px;
+  }
+
+  /* CARD 2 */
+
+  .wireframe-card{
+    width:220px;
+    height:300px;
+    background:#ece8e8;
+    border-radius:8px;
+    padding:15px;
+  }
+
+  .top-bar{
+    height:15px;
+    width:80%;
+    background:#c7c7c7;
+    margin:auto;
+  }
+
+  .placeholder{
+    border:1px solid #555;
+    margin-top:20px;
+  }
+
+  .big{
+    width:90px;
+    height:55px;
+  }
+
+  .medium{
+    width:120px;
+    height:55px;
+  }
+
+  .grey-box{
+    margin-top:30px;
+    height:55px;
+    background:#cfcfcf;
+  }
+
+  /* FINAL DESIGN */
+
+  .design-card{
+    width:220px;
+    height:300px;
+    background:#fffdfb;
+    border:1px solid #444;
+    border-radius:10px;
+    overflow:hidden;
+  }
+
+  .browser-top{
+    height:18px;
+    border-bottom:1px solid #ddd;
+  }
+
+  .design-content{
+    padding:15px;
+  }
+
+  .purple-title{
+    height:12px;
+    width:90px;
+    background:#b38df5;
+    margin-bottom:15px;
+  }
+
+  .design-row{
+    display:flex;
+    gap:10px;
+  }
+
+  .design-image{
+    width:70px;
+    height:55px;
+    background:#efefef;
+  }
+
+  .design-text{
+    flex:1;
+  }
+
+  .line{
+    height:7px;
+    background:#ddd;
+    margin-bottom:8px;
+  }
+
+  .button-demo{
+    width:90px;
+    padding:8px;
+    text-align:center;
+    background:#ff8ca3;
+    color:white;
+    border-radius:20px;
+    margin-top:10px;
+    font-size:12px;
+  }
+
+  .labels{
+    margin-top:15px;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+  }
+
+  .labels h3{
+    font-size:14px;
+  }
+
+  .labels p{
+    font-size:12px;
+  }
+
+  /* TIP BOX */
+
+  .tip{
+    margin:30px auto;
+    width:420px;
+    background:#d8ecff;
+    border:1px solid orange;
+    border-radius:10px;
+    padding:10px 15px;
+    font-size:14px;
+  }
+
+  /* BUTTON */
+
+  .next-container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:35px;
+  }
+
+  .next-btn{
+    border:none;
+    background:#e8a120;
+    color:white;
+    font-size:30px;
+    font-weight:700;
+    padding:12px 40px;
+    border-radius:40px;
+    cursor:pointer;
+
+    transition:0.3s;
+  }
+
+  .next-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+  }
+
+</style>
+</head>
+<body>
+
+<div class="top-line"></div>
+
+<header>
+
+  <div class="left-header">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" class="logo">
+    <div class="title">Low vs High Fidelity</div>
+  </div>
+
+  <div class="center-progress">
+    <div class="level-text">Lvl 2 af 5</div>
+
+    <div class="progress">
+      <div class="active"></div>
+
+    </div>
+  </div>
+
+
+  <nav>
+    <a href="#">Menu</a>
+    <a href="#">Lær</a>
+    <a href="#">Levels</a>
+
+    <button class="speaker">
+      <img src="Ikke-navngivet-1.png" alt="Ikon af højtaler">
+    </button>
+
+  </nav>
+
+</header>
+
+<div class="container">
+
+  <h1>Hvad er en Wireframe?</h1>
+
+  <div class="info-box">
+    Wireframes fungerer som det grundlæggende skelet eller den overordnede plan for dit digitale produkt, før det egentlige visuelle design tilføjes.
+  </div>
+
+  <div class="main-section">
+
+    <div>
+      <div class="sketch-card">
+        <div class="sketch-box"></div>
+        <div class="sketch-box"></div>
+      </div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div>
+      <div class="wireframe-card">
+        <div class="top-bar"></div>
+
+        <div class="placeholder big"></div>
+
+        <div style="margin-top:15px;">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line" style="width:70%;"></div>
+        </div>
+
+        <div class="placeholder medium"></div>
+
+        <div class="grey-box"></div>
+      </div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div>
+      <div class="design-card">
+
+        <div class="browser-top"></div>
+
+        <div class="design-content">
+
+          <div class="purple-title"></div>
+
+          <div class="design-row">
+
+            <div class="design-image"></div>
+
+            <div class="design-text">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line" style="width:70%"></div>
+            </div>
+
+          </div>
+
+          <div class="button-demo">
+            Prøv nu
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="labels">
+
+    <div>
+      <h3>1. Sketch/Tegn</h3>
+      <p>Ideer og koncepter</p>
+    </div>
+
+    <div>
+      <h3>2. Wireframe</h3>
+      <p>Struktur og layout</p>
+    </div>
+
+    <div>
+      <h3>3. Endeligt design</h3>
+      <p>Farver og detaljer</p>
+    </div>
+
+  </div>
+
+  <div class="tip">
+    💡 Wireframes hjælper dig med at planlægge og strukturere,
+    inden du designer det endelige look.
+  </div>
+
+</div>
+
+<div class="next-container">
+
+  <button class="next-btn" onclick="goToNextLevel()">
+    Næste
+  </button>
+
+</div>
+
+<script>
+
+  function goToNextLevel(){
+
+    // Skift til næste level-side
+    window.location.href = "level3.html";
+
+  }
+
+</script>
+
+</body>
+</html>
+</html>
